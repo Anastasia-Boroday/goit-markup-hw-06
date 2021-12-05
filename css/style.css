@@ -384,6 +384,7 @@ img{
 .modal-label:focus {
     border-color: var(--accent-color);
 }
+
 .modal-coment{
     width: 100%;
     height: 120px;
