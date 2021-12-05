@@ -375,8 +375,9 @@ img{
     box-shadow: var(--box-shadow);
     border-radius: 4px;
 }
-.modal-form-btn.span{
-
+.modal-form-btn:focus,
+.modal-form-btn:hover{
+    background: var(--hero-btn-color);
 }
 
 /* -------------------about--------------------------- */
