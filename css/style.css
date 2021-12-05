@@ -372,7 +372,6 @@ img{
     letter-spacing: 0.01em;
 
     color: var(--content-placeholder);
-
 }
 
 .modal-form-btn{
@@ -396,6 +395,8 @@ img{
     background: var(--accent-color);
     box-shadow: var(--box-shadow);
     border-radius: 4px;
+
+    
 }
 .modal-form-btn:focus,
 .modal-form-btn:hover{
