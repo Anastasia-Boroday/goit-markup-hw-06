@@ -344,8 +344,8 @@ img{
     height: 40px;
     padding: 0 42px;
     
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 16px;
+    line-height: 1.25;
   
     letter-spacing: 0.03em;
 
@@ -390,6 +390,7 @@ img{
     resize: none;
     margin-bottom: 20px;
     padding: 12px 16px;
+    display: flex;
 
     border: 1px solid var(--modal-border-color);
     box-sizing: border-box;
@@ -397,7 +398,7 @@ img{
 
     outline: none;
 
-    transition: border-color 250ms var(--cubic-bezier);;
+    transition: border-color 250ms var(--cubic-bezier);
 }
 .modal-coment::placeholder{
     font-weight: normal;
@@ -411,10 +412,8 @@ img{
     border-color: var(--accent-color);
 }
 
-
-
 .modal-field{
-    display: flex;
+     display: flex;
     margin-bottom: 30px;
 
 }
@@ -430,9 +429,14 @@ img{
  
     border: 2px solid var(--main-title-color);
     border-radius: 2px;
+
+    transition: background-color 250ms var(--cubic-bezier),
+    border 250ms var(--cubic-bezier);
 }
 .modal-check-icon{
     fill: transparent;
+
+    transition: fill 250ms var(--cubic-bezier);
 }
 .modal-checbox:checked + .modal-check {
     background-color: var(--accent-color);
@@ -441,8 +445,6 @@ img{
 .modal-checbox:checked + .modal-check .modal-check-icon {
     fill: var(--hero-title-color);
 }
-
-
 .modal-checkbox-text{
     font-weight: normal;
     font-size: 14px;
@@ -452,7 +454,6 @@ img{
 
     color: var(--primary-color);
 }
-
 .modal-checkbox-link{
     font-weight: normal;
     font-size: 14px;
@@ -854,6 +855,11 @@ img{
     padding: 0px;
     margin-right: 12px;
     padding-left: 16px;
+
+    font-size: 16px;
+    line-height: 1.25;
+  
+    letter-spacing: 0.03em;
 
     border: 1px solid var(--btn-email);
     box-sizing: border-box;
