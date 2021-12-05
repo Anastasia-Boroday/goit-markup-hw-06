@@ -339,9 +339,10 @@ img{
     color: var(--primary-color);
 }
 .modal-input{
+ 
     width: 100%;
     height: 40px;
-    margin-bottom: 10px;
+
     padding: 0 42px;
 
     border: 1px solid var(--modal-border-color);
@@ -351,7 +352,39 @@ img{
     background-color: transparent;
 
     outline: none;
+    transition: border-color 250ms var(--cubic-bezier);
 }
+.modal-relative{
+    position: relative;
+    margin-bottom: 10px;
+
+    color: var(--main-title-color);
+}
+.modal-form-icon{
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    margin-left: 12px;
+
+    display: inline-block;
+    transform: translateY(-50%);
+   
+    fill: currentColor;
+}
+
+.modal-input:focus + .modal-form-icon {
+    fill: var(--accent-color);
+}
+
+.modal-input:focus,
+.modal-label:focus {
+    border-color: var(--accent-color);
+}
+
+
+
+
+
 .modal-coment{
     width: 100%;
     height: 120px;
@@ -373,7 +406,16 @@ img{
 
     color: var(--content-placeholder);
 }
+.checbox{
 
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.71;
+
+    letter-spacing: 0.03em;
+
+    color: var(--primary-color);
+}
 .modal-form-btn{
     width: 200px;
     height: 50px;
