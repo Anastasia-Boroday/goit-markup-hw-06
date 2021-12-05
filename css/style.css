@@ -414,18 +414,35 @@ img{
 
 
 .modal-field{
-    outline: 1px solid red;
     display: flex;
-}
+    margin-bottom: 30px;
 
-.modal-checbox:checked + .modal-checkbox-text::before{
-    background-image: url(../img/modal-check.svg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+}
+.modal-check{
+    width: 16px ;
+    height: 15px;
+    margin-right: 7px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+ 
+    border: 2px solid var(--main-title-color);
+    border-radius: 2px;
+}
+.modal-check-icon{
+    fill: transparent;
+}
+.modal-checbox:checked + .modal-check {
+    background-color: var(--accent-color);
     border: none;
-
 }
+.modal-checbox:checked + .modal-check .modal-check-icon {
+    fill: var(--hero-title-color);
+}
+
+
 .modal-checkbox-text{
     font-weight: normal;
     font-size: 14px;
@@ -435,20 +452,12 @@ img{
 
     color: var(--primary-color);
 }
-.modal-checkbox-text::before{
-    content: '';
-    width: 16px ;
-    height: 15px;
-    display: block;
 
-    border: 2px solid var(--main-title-color);
-    border-radius: 2px;
-    
-}
 .modal-checkbox-link{
     font-weight: normal;
     font-size: 14px;
     line-height: 1.71;
+    margin-left: 4px;
 
     letter-spacing: 0.03em;
     text-decoration-line: underline;
