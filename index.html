@@ -44,13 +44,49 @@
       <div class="hero-container container ">
         <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
         <button class="hero-btn" type="button" data-modal-open>Заказать услугу</button>
-        <div class="backdrop is-hidden" data-modal>
+        <!-- вернуть is-hidden -->
+        <div class="backdrop " data-modal>
           <div class="modal">
             <button class="modal-btn" data-modal-close>
               <svg class="modal-icon" width="11" height="11">
                 <use href="./img/icons.svg#vector"></use>
               </svg>
-            </button>                        
+            </button>
+            <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
+            <form action="#" class="modal-form">
+              <label >
+                <span class="modal-label">Имя</span>
+                <input 
+                class="modal-input"
+                type="text"
+                name="user-name"
+                required>
+              </label>
+
+              <label >
+                <span class="modal-label">Телефон</span>
+                <input 
+                class="modal-input"
+                type="tel"
+                name="user-tel"
+                required>
+              </label>
+
+              <label >
+                <span class="modal-label">Почта</span>
+                <input 
+                class="modal-input"
+                type="email"
+                name="user-email"
+                required>
+              </label>
+
+              <label >
+                <span class="modal-label">Комментарий</span>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+              </label>
+              <button type="submit" class="modal-form-btn"><span>Отправить</span></button>
+            </form>                        
           </div>
         </div>
       </div>
