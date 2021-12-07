@@ -951,15 +951,15 @@ img{
     box-shadow: var(--box-shadow);
     border-radius: 4px;
 
-    transition: background-color 250ms var(--cubic-bezier),
-    outline  250ms var(--cubic-bezier);
+    transition: background-color 250ms var(--cubic-bezier);
+   
 
     cursor: pointer;
-    outline: none;
+   
 }
 .modal-form-btn:focus{
     background-color: var(--hero-btn-color);
-    outline: 2px solid blue;
+    
 }
 .modal-form-btn:hover{
     background-color: var(--hero-btn-color);
