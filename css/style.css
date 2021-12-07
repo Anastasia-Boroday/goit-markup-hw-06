@@ -685,16 +685,18 @@ img{
     width: 100%;
     background-color: var(--bg-backdrop);
     z-index: 1;
-    transition: opacity 300ms, visibility 300ms;
+    transition: opacity 600ms var(--cubic-bezier),
+    visibility 600ms var(--cubic-bezier);
 }
 .backdrop.is-hidden{
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
-
+  
  }
 .backdrop.is-hidden .modal {
     transform: scale(1, 2)  translate(100%, 100%);
+
 }
 .modal{
     position: absolute;
@@ -794,6 +796,9 @@ img{
     outline 250ms var(--cubic-bezier);
    
 }
+.modal-input:focus{
+    outline: 1px solid var(--accent-color);
+}
 .modal-relative{
     position: relative;
  
@@ -816,10 +821,7 @@ img{
     fill: var(--accent-color);
 }
 
-.modal-input:focus,
-.modal-label:focus {
-    outline: 1px solid var(--accent-color);
-}
+
 /* ----------------- */
 .modal-field-textarea{
     margin-bottom: 20px;
@@ -860,7 +862,7 @@ img{
     margin-bottom: 30px;
 
     justify-content:center;
-    outline: none;
+    
 }
 .modal-check{
     width: 16px ;
@@ -881,6 +883,7 @@ img{
     cursor: pointer;
 }
 
+
 .modal-check-icon{
     fill: transparent;
     transition: fill 250ms var(--cubic-bezier);
@@ -889,6 +892,11 @@ img{
     background-color: var(--accent-color);
     border: none;
 }
+
+.modal-checbox:focus + .modal-check  {
+    border: 2px solid var(--accent-color);
+}
+
 .modal-checbox:checked + .modal-check .modal-check-icon {
     fill: var(--hero-title-color);
 }
@@ -912,7 +920,15 @@ img{
     text-decoration-line: underline;
 
     color: var(--accent-color);
+    outline: none;
+
+    transition: outline 250ms var(--cubic-bezier) ;
 }
+.modal-checkbox-link:focus{
+    outline: 2px solid var(--accent-color);
+    border-radius: 2px;
+}
+
 /* ------------------------------- */
 .modal-form-btn{
     width: 200px;
@@ -929,19 +945,25 @@ img{
     justify-content: center;
     letter-spacing: 0.06em;
 
-    color: var(--hero-title-color);
-
-    border: 0;
+    color: var(--hero-title-color);  
     background-color: var(--accent-color);
+    border: 0;
     box-shadow: var(--box-shadow);
     border-radius: 4px;
 
-    transition: background-color 250ms var(--cubic-bezier) ;
+    transition: background-color 250ms var(--cubic-bezier),
+    outline  250ms var(--cubic-bezier);
+
     cursor: pointer;
+    outline: none;
 }
-.modal-form-btn:focus,
+.modal-form-btn:focus{
+    background-color: var(--hero-btn-color);
+    outline: 2px solid blue;
+}
 .modal-form-btn:hover{
     background-color: var(--hero-btn-color);
+
 }
 
 /* -------------------PORTFOLIO.HTML--------------------------- */
